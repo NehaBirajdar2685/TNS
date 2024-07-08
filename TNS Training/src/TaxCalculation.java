@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class TaxCalculation {
 	
 //function to calculate tax
@@ -24,6 +24,31 @@ public class TaxCalculation {
 		}
 		
 	}
-	
-
+	public static void main(String[] args) {
+		Scanner ob=new Scanner(System.in);
+		String name;
+		System.out.println("Enter Person name:");
+		name=ob.next();
+		System.out.println("Enter your age:");
+		int age=ob.nextInt();
+		System.out.println("Enter gender:");
+		String gender=ob.next();
+		System.out.println("Enter Income:");
+		int income=ob.nextInt();
+		
+		Day5 person=new Day5();
+		person.setName(name);
+		person.setAge(age);
+		person.setGender(gender);
+		person.setIncome(income);
+		
+		System.out.println(person);
+		TaxCalculation calc=new TaxCalculation();
+		calc.calculateTax(person);
+		System.out.println("After calculation of tax:");
+		System.out.println(person);
+		ob.close();
+		
+	}
 }
+	

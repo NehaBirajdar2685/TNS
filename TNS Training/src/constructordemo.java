@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class constructordemo {
 	private String custName;
 	private int custid;
@@ -47,10 +47,31 @@ public class constructordemo {
 		return "constructordemo [custName=" + custName + ", custid=" + custid + ", custcity=" + custcity + "]";
 	}
 	
-	
-	
-	
-	
-	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String name,city;
+		int id;
+		System.out.println("enter id:");
+		id=sc.nextInt();
+		sc.nextLine();
+		System.out.println("enter cust name");
+		name=sc.nextLine();
+		System.out.println("enter cust city");
+		city=sc.nextLine();
+		System.out.println(" ");
+		constructordemo c1= new constructordemo();
+		c1.setCustName(name);
+		c1.setCustid(id);
+		c1.setCustcity(city);
+		System.out.println(c1);
+		sc.close();
+		constructordemo c2= new constructordemo(name,id,city);
+		System.out.println(c2);
+		
+		
+				
+	}
 
-}
+	}
+
+
